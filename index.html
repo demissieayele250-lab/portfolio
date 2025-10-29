@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mikias Abebaw | CS Student</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section id="home" class="section active">
+    <nav>
+      <div class="logo">
+        <img src="images/logo2.png" alt="logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active" data-section="home">HOME</a></li>
+        <li><a href="#" class="nav-link" data-section="about">ABOUT</a></li>
+        <li><a href="#" class="nav-link" data-section="projects">PROJECTS</a></li>
+        <li><a href="#" class="nav-link" data-section="testimonials">TESTIMONIALS</a></li>
+        <li><a href="#" class="nav-link" data-section="contact">CONTACT</a></li>
+      </ul>
+      <div class="menu-btn" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="text">
+        <h1>HI, I'M MIKIAS!</h1>
+        <h2>COMPUTER SCIENCE <span>STUDENT</span></h2>
+        <p>Passionate about building efficient systems with C++ and Java. I turn ideas into clean, working code.</p>
+        <div class="buttons">
+          <a href="cv.pdf" download class="btn primary">Download CV</a>
+          <a href="#" class="btn secondary" data-section="projects">View Projects</a>
+        </div>
+      </div>
+      <div class="image">
+        <div class="hexagon">
+          <img src="images/dev2.png" alt="dev" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-photo">
+  <img src="images/profile.png" alt="profile">
+</div>
+      <p class="about-text">I'm a final-year Computer Science student at <strong>University of Gondar</strong>. I specialize in <strong>object-oriented programming</strong> using <strong>C++</strong> and <strong>Java</strong>. I love solving real problems with clean, efficient code.</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="skills">Skills</button>
+        <button class="tab-btn" data-tab="experience">Experience</button>
+        <button class="tab-btn" data-tab="education">Education</button>
+      </div>
+
+      <div class="tab-content active" id="skills">
+        <ul>
+          <li><strong>C++</strong> – OOP, Data Structures, STL</li>
+          <li><strong>Java</strong> – Swing, Collections, JDBC</li>
+          <li><strong>Web</strong> – HTML, CSS, JavaScript</li>
+        </ul>
+      </div>
+      <div class="tab-content" id="experience">
+        <ul>
+          <li>Gym Customer Management System (C++)</li>
+          <li>Hotel Management System (Java)</li>
+        </ul>
+      </div>
+      <div class="tab-content" id="education">
+        <ul>
+          <li><strong>2026 – Present</strong><br>BSc Computer Science – University of Gondar</li>
+          <li>Online Courses: C++, Java, Web Development</li>
+        </ul>
+      </div>
+
+      <a href="#" class="back-home" data-section="home">Back to Home</a>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card" onclick="showCode('cpp')">
+          <i class="fas fa-terminal"></i>
+          <h3>Gym Management System</h3>
+          <p>C++ • OOP • File Handling</p>
+          <a href="https://github.com/Mikias-Abebaw/Gym-Management-Cpp" target="_blank" class="github-btn">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+        <div class="project-card" onclick="showCode('java')">
+          <i class="fab fa-java"></i>
+          <h3>Hotel Booking System</h3>
+          <p>Java • GUI • Database</p>
+          <a href="https://github.com/Mikias-Abebaw/Hotel-Management-Java" target="_blank" class="github-btn">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="code-view" id="code-view">
+        <div class="code-header">
+          <span id="code-title"></span>
+          <div>
+            <button onclick="copyCode()" class="copy-btn" title="Copy Code">
+              <i class="fas fa-copy"></i>
+            </button>
+            <button onclick="navigateTo('home')" class="back-home-btn">Home</button>
+            <button onclick="hideCode()" class="close-code">Back</button>
+          </div>
+        </div>
+        <pre><code id="code-block"></code></pre>
+      </div>
+
+      <a href="#" class="back-home" data-section="home">Back to Home</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2 class="section-title">Testimonials</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>"Mikias is a talented programmer with strong problem-solving skills."</p>
+          <strong>— Prammer Wubante Tilahun</strong>
+        </div>
+        <div class="testimonial">
+          <p>"His C++ project was clean, efficient, and well-structured."</p>
+          <strong>— Group Leader Tewodros Kassahun</strong>
+        </div>
+      </div>
+      <a href="#" class="back-home" data-section="home">Back to Home</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> abebawmikias2@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +251 93 30 07 501</p>
+          <div class="social-links">
+            <a href="https://t.me/cholearoge" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://linkedin.com/in/mikias-abebaw-69b307341e" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/mike-king-dotcom/Mikias-Abebaw" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <form id="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      <a href="#" class="back-home" data-section="home">Back to Home</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
